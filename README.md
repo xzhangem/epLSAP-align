@@ -9,5 +9,5 @@ To test with query protein "a.pdb" and the target protein "b.pdb" with TMalign/M
 `python score_test.py --q_pdb a.pdb --t_pdb b.pdb --mode TM/mican`
 
 As the example of integrating epLSAP-aligner into other the existing NS alignment in a computationally efficient way, currently we use USalign2.    
-We implement epLSAP-aligner to replace EGS in original USalign2. The implementation are mainly contained in "SOIalign.h" file. 
+We implement epLSAP-aligner to replace EGS in original USalign2. The implementations are mainly contained in "SOIalign.h" file. 
 
