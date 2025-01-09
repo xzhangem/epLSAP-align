@@ -1,5 +1,6 @@
 # epLSAP-Aligner
-The implementation of "Accurate and fast non-sequential protein structural alignment solver with entropy-regularized partial linear sum assignment problem formulation" (epLSAP-Aligner).     
+The implementation of "epLSAP-Align: A non-sequential protein structural alignment solver with entropy-regularized partial linear sum assignment
+problem formulation".     
                 
 The dependencies and libraries needed for the Python script is listed in requirement.yaml.      
             
