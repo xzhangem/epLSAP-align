@@ -38,3 +38,4 @@ The output of the main alignment function, epLSAP_Main in epLSAP_fun.py, is Numb
 The C/C++ version of epLSAP-TM is also implemented in the File USalign-epLSAP, where the codes are built based on USalign2 (https://github.com/pylelab/USalign).    
 In this C/C++ implementation, in the "SOalign.h" file, we replace the EGS solver of USalign2 with our epLSAP solver, and use SP-score instead of TM-score. The usage of epLSAP-TM is the same as USalign2 NS mode.  
 
+
