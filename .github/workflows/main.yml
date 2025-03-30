@@ -1,3 +1,4 @@
+
 name: Build TMalign_tools for macOS
 
 on:
@@ -8,11 +9,8 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
-        
+    runs-on: macos-latest  # 使用 macOS 环境
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -20,15 +18,19 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.9"
+          python-version: "3.9"  # 指定 Python 版本
 
       - name: Install dependencies
-        run: pip install pybind11
-
-      - name: Compile
         run: |
-          if [[ "$RUNNER_OS" == "Windows" ]]; then
-            cl -O2 -EHsc -MD -LD -I$(python -m pybind11 --includes) TMalign_tools.cpp -FeTMalign_tools.pyd
-          else
-            c++ -O3 -Wall -shared -std=c++11 -fPIC $(python3 -m pybind11 --includes) TMalign_tools.cpp -o TMalign_tools$(python3-config --extension-suffix)
-          fi
+          python -m pip install --upgrade pip
+          pip install pybind11 numpy
+
+      - name: Compile TMalign_tools.cpp
+        run: |
+          c++ -O3 -Wall -shared -std=c++11 -fPIC $(python3 -m pybind11 --includes) TMalign_tools.cpp -o TMalign_tools$(python3-config --extension-suffix)
+
+      - name: Upload artifact (可选)
+        uses: actions/upload-artifact@v3
+        with:
+          name: TMalign_tools-macos
+          path: TMalign_tools*.so  # 生成的动态库文件
