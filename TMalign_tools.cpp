@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-#include <malloc.h>
+#include <stdlib.h>
 #include <sstream>
 #include <iostream>
 #include <iomanip>
