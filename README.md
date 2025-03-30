@@ -4,6 +4,7 @@ problem formulation".
             
 ## ***Python Dependencies:***
 For the Python implementation, we highly recommond using Anaconda enviornment. Suppose that the conda enviornment name is *eplsap*, then:
+`conda create --name eplsap python=3.9`
 
             
 By leveraging the concise grammar style of Python programming, the Python scripts briefly shows how the proposed non-sequential works with the superposition produced by TMalign and MICAN.     
