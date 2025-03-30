@@ -12,8 +12,6 @@ jobs:
     runs-on: macos-latest  # 使用 macOS 环境
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
