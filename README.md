@@ -19,6 +19,8 @@ By leveraging the concise grammar style of Python programming, the Python script
 
 To test with query protein "a.pdb" and the target protein "b.pdb" with TMalign/MICAN superposition, one can type   
 `python score_test.py --q_pdb a.pdb --t_pdb b.pdb --mode TM/mican`
+For example, you can try the pdb example included in the file as follows:
+`python score_test.py --q_pdb ./USalign-epLSAP/PDB1.pdb --t_pdb ./USalign-epLSAP/PDB2.pdb --mode TM`
 
 ## C/C++ implementation:
 The C/C++ version of epLSAP-TM is also implemented in the File USalign-epLSAP, where the codes are built based on USalign2 (https://github.com/pylelab/USalign).    
