@@ -2,22 +2,29 @@ name: Build macOS Binary
 
 on:
   push:
-    branches: [ "main" ]  # 代码推送到 main 分支时触发
-  workflow_dispatch:       # 允许手动触发
+    branches: [ "main" ]  # 触发条件：推送到 main 分支时运行
+  pull_request:
+    branches: [ "main" ]  # 或 PR 到 main 分支时运行
+  workflow_dispatch:      # 允许手动触发
 
 jobs:
-  build:
+  build-macos:
     runs-on: macos-latest  # 使用 GitHub 提供的 macOS 最新版本环境
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4  # 拉取仓库代码
+        uses: actions/checkout@v4  # 拉取代码
 
-      - name: Compile C++ code
+      - name: Install dependencies (if any)
+        run: |
+          brew update  # 可选：安装依赖（如需要）
+          # brew install some-package
+
+      - name: Compile TMalign_tools.cpp
         run: |
           clang++ -std=c++11 -O3 -o TMalign_tools TMalign_tools.cpp
 
-      - name: Upload binary
+      - name: Upload macOS binary
         uses: actions/upload-artifact@v3
         with:
-          name: TMalign_tools-macOS
-          path: TMalign_tools  # 上传生成的二进制文件
+          name: TMalign_tools-macOS  # 生成的二进制文件名
+          path: TMalign_tools         # 上传编译后的文件
