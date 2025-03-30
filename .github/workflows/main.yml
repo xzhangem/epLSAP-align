@@ -29,7 +29,7 @@ jobs:
           c++ -O3 -Wall -shared -std=c++11 -fPIC $(python3 -m pybind11 --includes) TMalign_tools.cpp -o TMalign_tools$(python3-config --extension-suffix)
 
       - name: Upload artifact (可选)
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: TMalign_tools-macos
           path: TMalign_tools*.so  # 生成的动态库文件
