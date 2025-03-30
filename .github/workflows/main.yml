@@ -1,4 +1,3 @@
-
 name: Build TMalign_tools for macOS
 
 on:
@@ -12,6 +11,8 @@ jobs:
     runs-on: macos-latest  # 使用 macOS 环境
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -27,3 +28,8 @@ jobs:
         run: |
           c++ -O3 -Wall -shared -std=c++11 -fPIC $(python3 -m pybind11 --includes) TMalign_tools.cpp -o TMalign_tools$(python3-config --extension-suffix)
 
+      - name: Upload artifact (可选)
+        uses: actions/upload-artifact@v3
+        with:
+          name: TMalign_tools-macos
+          path: TMalign_tools*.so  # 生成的动态库文件
