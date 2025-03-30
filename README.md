@@ -29,6 +29,8 @@ To test with query protein "a.pdb" and the target protein "b.pdb" with TMalign/M
 For example, you can try the pdb example included in the file as follows:
 `python score_test.py --q_pdb ./USalign-epLSAP/PDB1.pdb --t_pdb ./USalign-epLSAP/PDB2.pdb --mode TM`
 
+The output of the main alignment function, epLSAP_Main in epLSAP_fun.py, is Number of align (OT_Nali), RMSD (OT_RMSD), TM-score (OT_TMscore), structure overlap (OT_SO). If parameter fast_opt is set true (default false), the residue-to-residue correspondence will be the last output.
+
 ***Notice:***   We have tested the Python version on MacOS and Ubuntu system and it works well, the function refer to system difference is the Python link of C/C++ codes "TMalign_tools.cpp" for TM-score calculation. The .so links are generated in the Github Actions part. If you meet bugs with other systems, please raise issues. 
 
 ## C/C++ implementation:
