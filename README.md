@@ -7,6 +7,8 @@ For the Python implementation, we highly recommond using Anaconda enviornment. S
 
 `conda create --name eplsap python=3.9`
 
+After constructing conda enviroment, 
+
 `pip install biopython`
 
 `pip install pymican`
@@ -15,7 +17,7 @@ For the Python implementation, we highly recommond using Anaconda enviornment. S
 
 `pip install scipy`
 
-or simply
+or directly
 
 `pip install -r requirements.txt`
             
