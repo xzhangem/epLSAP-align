@@ -14,6 +14,10 @@ For the Python implementation, we highly recommond using Anaconda enviornment. S
 `pip install tmtools`
 
 `pip install scipy`
+
+or simply
+
+`pip install -r requirements.txt`
             
 By leveraging the concise grammar style of Python programming, the Python scripts briefly shows how the proposed non-sequential works with the superposition produced by TMalign and MICAN.     
 
