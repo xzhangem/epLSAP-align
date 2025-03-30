@@ -25,5 +25,5 @@ jobs:
 
       - name: Compile TMalign_tools.cpp
         run: |
-          c++ -O3 -Wall -shared -std=c++11 -fPIC $(python3 -m pybind11 --includes) src/TMalign_tools.cpp -o src/TMalign_tools$(python3-config --extension-suffix)
+          c++ -O3 -Wall -shared -std=c++11 -fPIC $(python3 -m pybind11 --includes) TMalign_tools.cpp -o src/TMalign_tools$(python3-config --extension-suffix)
 
