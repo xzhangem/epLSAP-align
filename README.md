@@ -1,8 +1,10 @@
 # epLSAP-Aligner
 The implementation of "epLSAP-Align: A non-sequential protein structural alignment solver with entropy-regularized partial linear sum assignment
 problem formulation".     
-                
-The dependencies and libraries needed for the Python script is listed in requirement.yaml.      
+            
+***Dependencies:***
+For the Python implementation, we highly recommond using Anaconda enviornment. Suppose that the conda enviornment name is *eplsap*, then:
+
             
 By leveraging the concise grammar style of Python programming, the Python scripts briefly shows how the proposed non-sequential works with the superposition produced by TMalign and MICAN.     
 
