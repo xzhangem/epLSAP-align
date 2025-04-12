@@ -7,7 +7,9 @@ For the Python implementation, we highly recommend using Anaconda enviornment. S
 
 `conda create --name eplsap python=3.9`
 
-After constructing conda enviroment, 
+`conda activate eplsap`
+
+After constructing and activating conda enviroment, 
 
 `pip install biopython`
 
