@@ -35,7 +35,7 @@ The output of the main alignment function, epLSAP_Main in epLSAP_fun.py, is Numb
 #### ***Notice:***   We have tested the Python version on MacOS and Ubuntu system and it works well, the function with system difference is the Python link of C/C++ codes "TMalign_tools.cpp" for TM-score calculation. The .so links are generated in the Github Actions part detailed in "./github/workflows/main.yml" file. If you encounter bugs on other systems, please raise issues and we will fix them. 
 
 ## C/C++ implementation:
-The C/C++ version of epLSAP-TM is also implemented in the File USalign-epLSAP, where the codes are built based on USalign2 (https://github.com/pylelab/USalign).    
+The C/C++ version of epLSAP-TM is also implemented in the File USalign-epLSAP for the CPU time comparisons, where the codes are built based on USalign2 (https://github.com/pylelab/USalign).    
 In this C/C++ implementation, in the "SOalign.h" file, we replace the EGS solver of USalign2 with our epLSAP solver, and use SP-score instead of TM-score. The usage of epLSAP-TM is the same as USalign2 NS mode.  
 
 
