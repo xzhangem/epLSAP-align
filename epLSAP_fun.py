@@ -476,7 +476,7 @@ def epLSAP_Main(pdb1, pdb2, fast_opt=False, mode='TM', lmbd=50):
         t0 = tmtool_score.t
     else:
         mic = mican()
-        aln = mic.align(pdb1, pdb2)
+        aln = mic.align(pdb1, pdb2, options='-w')
         mic_rot, mic_trans = (aln.translation_rot).T, aln.translation_vec
         coord1_array_t1 = np.dot(coord1_array, mic_rot) + mic_trans
         u0 = mic_rot
